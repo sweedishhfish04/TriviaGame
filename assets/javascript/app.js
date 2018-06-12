@@ -102,9 +102,9 @@ function presentQuestion() {
         });
     } else {
         $("#quiz").addClass("hidden")
-        if(score > 6) { $("#winner").removeClass("hidden") }
+        if (score > 6) { $("#winner").removeClass("hidden") }
         else { $("#loser").removeClass("hidden") }
-        $("#score").text("You got " + score + " questions right our of 10")
+        $("#score").text("You got " + score + " questions right out of 10")
     }
 }
 
@@ -133,11 +133,11 @@ $("#false").click(function () {
 });
 var timer = 120
 
-setInterval(function() {
-  timer--
-  $("#timer").text(timer + " seconds")
-  if(timer === 0) {
-    currentQuestion = 10
-    presentQuestion()
-  }
+setInterval(function () {
+    timer--
+    $("#timer").text(timer + " seconds")
+    if (timer === 0) {
+        currentQuestion = 10
+        presentQuestion()
+    }
 }, 1000)
