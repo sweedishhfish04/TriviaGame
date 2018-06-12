@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 button {
     width: 60px;
@@ -30,4 +30,7 @@ button {
 .wrong {
     color: white;
     background-color: red;
+}
+.timer {
+    font-size: 24px;
 }

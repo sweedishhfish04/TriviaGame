@@ -101,7 +101,7 @@ function presentQuestion() {
             $("#false").removeClass("correct wrong")
         });
     } else {
-        $("#id").addClass("hidden")
+        $("#quiz").addClass("hidden")
         if(score > 6) { $("#winner").removeClass("hidden") }
         else { $("#loser").removeClass("hidden") }
         $("#score").text("You got " + score + " questions right our of 10")
@@ -131,4 +131,13 @@ $("#false").click(function () {
     currentQuestion++
     presentQuestion();
 });
+var timer = 120
 
+setInterval(function() {
+  timer--
+  $("#timer").text(timer + " seconds")
+  if(timer === 0) {
+    currentQuestion = 10
+    presentQuestion()
+  }
+}, 1000)
