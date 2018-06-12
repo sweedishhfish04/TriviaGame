@@ -3,6 +3,6 @@ body {
     color: #FFC62F;
     text-align: center;
 }
-#proBowl {
+.hidden {
     visibility: hidden;
 }
