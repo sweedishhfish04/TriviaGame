@@ -23,11 +23,11 @@ button {
     margin: 20px;
     padding: 20px;
 }
-correct {
+.correct {
     color: white;
     background-color: green;
 }
-wrong {
+.wrong {
     color: white;
     background-color: red;
 }

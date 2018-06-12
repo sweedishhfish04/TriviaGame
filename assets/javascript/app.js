@@ -101,10 +101,10 @@ presentQuestion()
 $("#true").click(function () {
     if ("True" === questions[currentQuestion].correctAnswer) {
         score++
-        (this).addClass("correct")
+        $(this).addClass("correct")
     }
     else {
-        (this).addClass("wrong")
+        $(this).addClass("wrong")
     }
     currentQuestion++
     presentQuestion();
