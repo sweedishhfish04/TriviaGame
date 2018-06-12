@@ -95,11 +95,14 @@ var score = 0;
 function presentQuestion() {
     $("#question").fadeOut(function () {
         $(this).text(questions[currentQuestion].question)
-    }).fadeIn().removeClass("correct wrong");
+    }).fadeIn(function() {
+        $("#true").removeClass("correct wrong")
+        $("#false").removeClass("correct wrong")
+    });
 }
 presentQuestion()
 $("#true").click(function () {
-    if ("True" === questions[currentQuestion].correctAnswer) {
+    if ("True" === questions[currentQuestion].correctAnswers) {
         score++
         $(this).addClass("correct")
     }
@@ -109,3 +112,15 @@ $("#true").click(function () {
     currentQuestion++
     presentQuestion();
 });
+$("#false").click(function () {
+    if ("False" === questions[currentQuestion].correctAnswers) {
+        score++
+        $(this).addClass("correct")
+    }
+    else {
+        $(this).addClass("wrong")
+    }
+    currentQuestion++
+    presentQuestion();
+});
+
