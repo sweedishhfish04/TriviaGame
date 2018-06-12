@@ -91,6 +91,9 @@ var questions = [
 
 ];
 var currentQuestion = 0;
+function presentQuestion() {
 $("#question").fadeOut(function() {
     $(this).text(questions[currentQuestion].question)
   }).fadeIn();
+}
+presentQuestion()
