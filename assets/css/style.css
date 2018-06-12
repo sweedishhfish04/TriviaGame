@@ -6,3 +6,18 @@ body {
 .hidden {
     visibility: hidden;
 }
+#true {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #FFC62F;
+    color: #4F2683;
+    border: none;
+}
+#false {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #FFC62F;
+    color: #4F2683;
+    border: none;
+    
+}
