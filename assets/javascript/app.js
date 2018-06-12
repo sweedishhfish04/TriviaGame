@@ -93,13 +93,21 @@ var questions = [
 var currentQuestion = 0;
 var score = 0;
 function presentQuestion() {
-    $("#question").fadeOut(function () {
-        $(this).text(questions[currentQuestion].question)
-    }).fadeIn(function() {
-        $("#true").removeClass("correct wrong")
-        $("#false").removeClass("correct wrong")
-    });
+    if (currentQuestion < questions.length) {
+        $("#question").fadeOut(function () {
+            $(this).text(questions[currentQuestion].question)
+        }).fadeIn(function () {
+            $("#true").removeClass("correct wrong")
+            $("#false").removeClass("correct wrong")
+        });
+    } else {
+        $("#id").addClass("hidden")
+        if(score > 6) { $("#winner").removeClass("hidden") }
+        else { $("#loser").removeClass("hidden") }
+        $("#score").text("You got " + score + " questions right our of 10")
+    }
 }
+
 presentQuestion()
 $("#true").click(function () {
     if ("True" === questions[currentQuestion].correctAnswers) {
