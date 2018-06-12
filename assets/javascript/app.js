@@ -90,3 +90,7 @@ var questions = [
     },
 
 ];
+var currentQuestion = 0;
+$("#question").fadeOut(function() {
+    $(this).text(questions[currentQuestion].question)
+  }).fadeIn();
