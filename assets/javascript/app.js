@@ -91,13 +91,21 @@ var questions = [
 
 ];
 var currentQuestion = 0;
+var score = 0;
 function presentQuestion() {
-$("#question").fadeOut(function() {
-    $(this).text(questions[currentQuestion].question)
-  }).fadeIn();
+    $("#question").fadeOut(function () {
+        $(this).text(questions[currentQuestion].question)
+    }).fadeIn().removeClass("correct wrong");
 }
 presentQuestion()
-$("#true").click(function(){
+$("#true").click(function () {
+    if ("True" === questions[currentQuestion].correctAnswer) {
+        score++
+        (this).addClass("correct")
+    }
+    else {
+        (this).addClass("wrong")
+    }
     currentQuestion++
-presentQuestion();
+    presentQuestion();
 });
