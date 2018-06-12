@@ -97,3 +97,7 @@ $("#question").fadeOut(function() {
   }).fadeIn();
 }
 presentQuestion()
+$("#true").click(function(){
+    currentQuestion++
+presentQuestion();
+});
