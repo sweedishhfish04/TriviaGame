@@ -140,4 +140,4 @@ setInterval(function () {
         currentQuestion = 10
         presentQuestion()
     }
-}, 1000)
+}, 4000)

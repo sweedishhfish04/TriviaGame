@@ -18,6 +18,16 @@ button {
     border: none;
     margin: 10px;
 }
+button:hover {
+    width: 60px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: blue;
+    color: red;
+    font-weight: bolder;
+    border: none;
+    margin: 10px;
+}
 #question {
     font-size: 36px;
     margin: 20px;
