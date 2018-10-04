@@ -131,7 +131,7 @@ $("#false").click(function () {
     currentQuestion++
     presentQuestion();
 });
-var timer = 120
+var timer = 50
 
 setInterval(function () {
     timer--
